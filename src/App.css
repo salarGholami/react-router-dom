@@ -38,12 +38,13 @@ a.active {
 }
 
 #dashboard {
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  border: 1px solid gray;
   display: flex;
 }
 
 #sidebar {
-  background-color: #dedede;
+  background-color: #7585b9;
 }
 
 #sidebar a {

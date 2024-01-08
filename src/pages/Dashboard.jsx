@@ -1,8 +1,15 @@
+import { NavLink, Outlet } from "react-router-dom";
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
-  )
+    <div id="dashboard">
+      <div id="sidebar">
+        <NavLink to="profile">Profile</NavLink>
+        <NavLink to="payments">payments</NavLink>
+      </div>
+      <Outlet />
+    </div>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
