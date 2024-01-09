@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 
 const posts = [
   {
@@ -21,6 +21,10 @@ const posts = [
 function Post() {
   const { id } = useParams();
   const post = posts.find((p) => p.id === Number(id));
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.getAll("type"));
+
   return (
     <div>
       <h1>single post</h1>
@@ -28,6 +32,13 @@ function Post() {
       <p>{post.title}</p>
       <p>{post.body}</p>
       <Link to="/app/posts">got to posts page</Link>
+      <div>
+        <button
+          onClick={() => setSearchParams({ name: "salar", type: "Crash" })}
+        >
+          update query
+        </button>
+      </div>
     </div>
   );
 }
