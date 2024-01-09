@@ -13,6 +13,9 @@ function AppNav() {
         <li>
           <NavLink to="dashboard">Dashboard</NavLink>
         </li>
+        <li>
+          <NavLink to="login">login</NavLink>
+        </li>
       </ul>
     </nav>
   );

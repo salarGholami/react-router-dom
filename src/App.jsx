@@ -7,12 +7,14 @@ import Layout from "./components/Layout";
 import Profile from "./components/Profile";
 import Payments from "./components/Payments";
 import Post from "./components/post";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/app" element={<Layout />}>
+          <Route path="login" element={<Login/>}/>
           <Route index element={<Home />} />
           <Route path="posts/:id" element={<Post />} />
           <Route path="posts" element={<Posts />} />
