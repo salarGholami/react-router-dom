@@ -23,7 +23,7 @@ function Post() {
   const post = posts.find((p) => p.id === Number(id));
 
   const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams.getAll("type"));
+  // console.log(searchParams.getAll("type"));
 
   return (
     <div>

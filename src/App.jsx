@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Posts from "./pages/Posts";
@@ -19,7 +19,7 @@ function App() {
           <Route path="posts/:id" element={<Post />} />
           <Route path="posts" element={<Posts />} />
           <Route path="dashboard" element={<Dashboard />}>
-            <Route index element={<Profile />} />
+            <Route index element={<Navigate to="Profile" />} />
             <Route path="profile" element={<Profile />} />
             <Route path="payments" element={<Payments />} />
           </Route>
